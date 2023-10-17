@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Show Movie Timing</title>
+</head>
+<body>
+    <h1>Movie Timing Details</h1>
+    <div>
+        <p>Movie Name: <span th:text="${movieTiming.narutoe}"></span></p>
+        <p>Start Time: <span th:text="${movieTiming.3:20}"></span></p>
+        <p>Duration: <span th:text="${movieTiming.164}"></span> minutes</p>
+        <p>Screen Number: <span th:text="${movieTiming.3}"></span></p>
+        <p>Movie Image:</p>
+        <img th:src="${movieTiming.movie_image}" alt="Movie Image">
+    </div>
+</body>
+</html>

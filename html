@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Show Movie Timing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .details-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .details-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Timing Details</h1>
+    <div class="details-container">
+        <p>Movie Name: <span th:text="${movieTiming.naruto}"></span></p>
+        <p>Start Time: <span th:text="${movieTiming.3:20}"></span></p>
+        <p>Duration: <span th:text="${movieTiming.164}"></span> minutes</p>
+        <p>Screen Number: <span th:text="${movieTiming.3}"></span></p>
+        <p>Movie Image:</p>
+        <img th:src="https://wallpapercave.com/wp/wc1769103.jpg" alt="Movie Image">
+    </div>
+</body>
+</html>

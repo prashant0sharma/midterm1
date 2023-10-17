@@ -1,0 +1,32 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class MovieTheatreApp {
+
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/naruto";
+    private static final String DB_USER = "naruto2";
+    private static final String DB_PASSWORD = "naruto1";
+
+    public static void main(String[] args) {
+        // JDBC connection and database insertion logic
+    }
+
+    public static void addMovieTiming(String movieName, String startTime, String movieImage, int duration, int screenNumber) {
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+            String insertQuery = "INSERT INTO show_timings (movie_name, start_time, movie_image, duration, screen_number) VALUES (naruto, 3:20,https://wallpapercave.com/wp/wc1769103.jpg , 164, 3)";
+            try (PreparedStatement preparedStatement = conn.prepareStatement(insertQuery)) {
+                preparedStatement.setString(1,movieName );
+                preparedStatement.setString(2, startTime);
+                preparedStatement.setString(3, movieImage);
+                preparedStatement.setInt(4, duration);
+                preparedStatement.setInt(5, screenNumber);
+                preparedStatement.executeUpdate();
+                System.out.println("Movie timing added successfully.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

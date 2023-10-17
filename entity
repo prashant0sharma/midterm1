@@ -1,0 +1,19 @@
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class MovieTiming {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long show_id;
+
+    private String movie_name;
+    private String start_time;
+    private String movie_image;
+    private int duration;
+    private int screen_number;
+
+    // getters and setters
+}

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+</head>
+<body>
+    <h1>Movie Timing Not Found</h1>
+    <p>The requested movie timing was not found.</p>
+</body>
+</html>
